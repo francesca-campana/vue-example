@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/style.css">
+
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Vue</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>Vue</h1>
+        </div>
+      </div>
+    </div>
+    <!-- Vue -->
+    <div id="app">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2>{{ message }}</h2>
+
+            <p>{{ title }}</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <ul class="list-group">
+              <li class="list-group-item active">
+                <div>
+                  <h3>Cras justo odio <span @click="togglePar()" class="badge badge-light">X</span></h3>
+                  <p v-if="textVisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+        <div class="row mt-3">
+          <div class="col-12">
+            <input v-model="inputValue" type="text" placeholder="Inserisci testo">
+            <p>{{ inputValue }}</p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
